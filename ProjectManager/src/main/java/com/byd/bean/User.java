@@ -12,6 +12,13 @@ public class User {
 	private boolean sex;
 	private String post;
 	private Date entryDate;
+	private String password;
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 	public int getId() {
 		return id;
 	}

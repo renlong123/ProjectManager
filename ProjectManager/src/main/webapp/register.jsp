@@ -10,13 +10,11 @@
 .table>tbody>tr>td{
     border:0px;
     }
+#registerTitle{
+	/* font-size: 20px; */
+	text-align: center;
+    }
 </style>
-<script>
-/* 	$(function jump(){
-		window.location.href="${request}"
-	}
-			) */
-</script>
 <meta charset="UTF-8">
 <title>登陆</title>
 </head>
@@ -108,21 +106,73 @@
 							<img alt="找不到图片" src="img/美女.jpg" class="img-rounded" width="100%"/>
 						</div>
 						<div class="col-md-4 column">
-						<form action="loginServlet" method="post">
-							<table class="table">
-							
+						<form action="registerServlet" method="post">
+							<table class="table">							
 								<tbody>
 									<tr >
-										<td colspan="2" >
-											<img alt="找不到图片" src="img/bilibili.jpg" class="img-rounded" width="100%"/>
+										<td colspan="2">
+											<div id="registerTitle">用户注册界面</div>
 										</td>
 									</tr>
 									<tr >
+										<td style="text-align:right;vertical-align:middle">
+											工&nbsp;&nbsp;&nbsp;&nbsp;号：
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="工号" name="jobNumber"/>
+										</td>
+									</tr>
+									<tr>
 										<td style="text-align:right;vertical-align:middle">
 											用户名：
 										</td>
 										<td>
 											<input type="text" class="form-control" placeholder="用户名" name="name"/>
+										</td>
+									</tr>
+									<tr >
+										<td style="text-align:right;vertical-align:middle">
+											电话：
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="电话号码" name="phoneNumber"/>
+										</td>
+									</tr>
+									<tr >
+										<td style="text-align:right;vertical-align:middle">
+											邮箱：
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="邮箱" name="email"/>
+										</td>
+									</tr>
+									<tr >
+										<td style="text-align:right;vertical-align:middle">
+											性别：
+										</td>
+										<td>
+											<label class="checkbox-inline">
+										      <input type="radio" name="sex" id="man" value="1"> 男
+										   </label>
+										   <label class="checkbox-inline">
+										      <input type="radio" name="sex" id="feman" value="0"> 女
+										   </label>
+										</td>
+									</tr>
+									<tr >
+										<td style="text-align:right;vertical-align:middle">
+											职务：
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="职务" name="post"/>
+										</td>
+									</tr>
+									<tr >
+										<td style="text-align:right;vertical-align:middle">
+											入职时间：
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="入职时间" name="entryDate"/>
 										</td>
 									</tr>
 									<tr>
@@ -133,18 +183,17 @@
 											<input type="password" class="form-control" placeholder="密码" name="password"/>
 										</td>
 									</tr>
+									
 									<tr >
 										<td align="center" colspan="2">
-											<button type="submit" class="btn btn-primary" >登陆</button>
-											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											<button class="btn btn-primary" id="register" onclick="location.href='${request.contextPath}/register.jsp'">注册</button>
+											<!-- <button type="submit" class="btn btn-primary" >登陆</button>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+											<button type="submit" class="btn btn-block">一键注册</button>
 										</td>
 									</tr>
 									<!-- <tr><div class="warning" ></div></tr> -->
 									<tr >
-										<td colspan="2">
-											<img alt="找不到图片" src="img/2233.jpg" class="img-rounded" width="100%"/>
-										</td>
+										
 									</tr>
 								</tbody>
 								

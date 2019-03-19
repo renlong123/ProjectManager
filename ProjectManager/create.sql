@@ -12,8 +12,9 @@ CREATE table user_(
 	user_sex boolean NOT NULL,
 	user_post varchar(50) NOT NULL,
 	user_entryDate DATE NOT NULL,
+	user_password varchar(30) NOT NULL,
 	PRIMARY KEY(user_id)
 )ENGINE=InnoDB,charset=utf8;
 
 --插入一条数据
-INSERT INTO user_ VALUES (null,281127,"admin","13632991223","ren.long1@byd.com",true,"电子工程师",2017-07-21);
+INSERT INTO user_ VALUES (null,281127,"admin","13632991223","ren.long1@byd.com",true,"电子工程师","2017-07-21","123456");
