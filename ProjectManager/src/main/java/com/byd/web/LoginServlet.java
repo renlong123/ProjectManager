@@ -52,6 +52,7 @@ public class LoginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("a", 100);
 			response.getWriter().write("登陆成功，你的用户名和密码是"+s);
+			response.setHeader("Refresh", "5;url="+request.getContextPath()+"/list");
 		}
 	}
 

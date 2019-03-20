@@ -15,6 +15,29 @@
 	text-align: center;
     }
 </style>
+
+<script type="text/javascript">
+	
+	function checkName(){
+		var jobNum = $("#jobNum").val();
+		//alert(1);
+		$.ajax({
+			url:"http://localhost:8080/ProjectManager/job",
+			data:{"jobNumber":jobNum},
+			type:"get",
+			success:function(msg){
+				//alert(msg);
+				if("true"!=msg){
+					document.getElementById("warning").innerHTML = "工号可用";
+				}else{
+					document.getElementById("warning").innerHTML = "工号已注册";
+				}
+			}
+		}
+				);
+	}
+	
+</script>
 <meta charset="UTF-8">
 <title>登陆</title>
 </head>
@@ -119,9 +142,10 @@
 											工&nbsp;&nbsp;&nbsp;&nbsp;号：
 										</td>
 										<td>
-											<input type="text" class="form-control" placeholder="工号" name="jobNumber"/>
+											<input id="jobNum" onblur="checkName()" type="text" class="form-control" placeholder="工号" name="jobNumber"/>
 										</td>
 									</tr>
+									<tr><td></td><td><div id="warning"></div></td></tr>
 									<tr>
 										<td style="text-align:right;vertical-align:middle">
 											用户名：

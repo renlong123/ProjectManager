@@ -2,7 +2,9 @@ package com.byd.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
+import com.byd.bean.Product;
 import com.byd.dao.LoginDAO;
 import com.byd.utils.DBUtils;
 
@@ -33,6 +35,21 @@ public class LoginService {
 		}
 		
 		return false;
+	}
+	
+	public List<Product> list(){
+		Connection conn = DBUtils.getConnection();
+		List<Product> list = null;
+		 try {
+			list = dao.selectAll(conn);
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 return list;
 	}
 
 }

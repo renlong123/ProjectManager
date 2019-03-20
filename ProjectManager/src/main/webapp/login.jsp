@@ -136,7 +136,7 @@
 										<td align="center" colspan="2">
 											<button type="submit" class="btn btn-primary" >登陆</button>
 											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-											<button class="btn btn-primary" id="register" onclick="location.href='${request.contextPath}/register.jsp'">注册</button>
+											<button type="button" onclick="location.href='/ProjectManager/register.jsp'" class="btn btn-primary">注册</button>
 										</td>
 									</tr>
 									<!-- <tr><div class="warning" ></div></tr> -->
